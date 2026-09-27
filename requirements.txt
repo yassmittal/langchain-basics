@@ -1,0 +1,7 @@
+langchain
+langchain-aws
+langchain-text-splitters
+boto3>=1.36.0
+botocore>=1.36.0
+python-dotenv
+pydantic

@@ -27,10 +27,11 @@ for when you're stuck or want to check your work.
      `requirements.txt`); if auth fails with an old-looking error, run
      `pip install --upgrade boto3 botocore`.
    - Set `BEDROCK_MODEL_ID` to a model you have access to - default is
-     DeepSeek-R1 (`deepseek.r1-v1:0`), on-demand/serverless, no Marketplace
-     subscription needed. Check the AWS console under **Amazon Bedrock ->
-     Model access** for what's enabled and the exact ID in your region; some
-     regions need a cross-region inference profile prefix (`us.`/`eu.`).
+     DeepSeek-R1 via the cross-region inference profile `us.deepseek.r1-v1:0`
+     (the bare model ID `deepseek.r1-v1:0` isn't invokable on-demand and
+     returns a `ValidationException`). Check the AWS console under **Amazon
+     Bedrock -> Cross-region inference -> Inference profiles** for the exact
+     profile ID in your region.
 
 **Note on lessons 04 and 06:** structured output and tool-calling support on
 Bedrock's Converse API varies by model. If `with_structured_output` or
@@ -42,7 +43,12 @@ the lesson's concept working end-to-end.
 
 ## Lessons
 
-Run any lesson with `python lessons/<file>.py` from the project root.
+Run any lesson **as a module, from the project root** (not as a plain script -
+that leaves `config.py` off the import path and raises `ModuleNotFoundError`):
+```
+python -m lessons.01_first_call
+```
+(dot-separated, no `.py` extension).
 
 | # | File | Concept |
 |---|------|---------|

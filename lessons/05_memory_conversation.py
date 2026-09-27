@@ -5,7 +5,7 @@ Goal: an LLM call is stateless by default - it only sees what you send it.
 "Memory" in a chat app just means: keep a growing list of messages and resend
 the whole list every turn, so the model can refer back to earlier context.
 
-Run with: python lessons/05_memory_conversation.py
+Run with (from the project root): python -m lessons.05_memory_conversation
 """
 
 from config import get_llm

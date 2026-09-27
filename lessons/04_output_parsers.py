@@ -9,7 +9,7 @@ Note: this relies on tool-calling support, which varies by model on Bedrock's
 Converse API. If it errors on your configured model, see the README's note
 on lessons 04/06.
 
-Run with: python lessons/04_output_parsers.py
+Run with (from the project root): python -m lessons.04_output_parsers
 """
 
 from config import get_llm

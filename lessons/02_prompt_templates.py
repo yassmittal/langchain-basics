@@ -5,7 +5,7 @@ Goal: stop hardcoding strings into messages. A ChatPromptTemplate defines a
 prompt with placeholders you fill in at call time - the foundation for
 reusable, parameterized chains.
 
-Run with: python lessons/02_prompt_templates.py
+Run with (from the project root): python -m lessons.02_prompt_templates
 """
 
 from config import get_llm

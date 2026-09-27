@@ -6,7 +6,7 @@ training data. Steps: split text into chunks -> embed each chunk -> store in a
 vector store -> retrieve the most relevant chunks for a question -> stuff them
 into the prompt as context.
 
-Run with: python lessons/07_rag_basics.py
+Run with (from the project root): python -m lessons.07_rag_basics
 """
 
 import os

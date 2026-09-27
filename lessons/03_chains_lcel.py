@@ -4,7 +4,7 @@ Lesson 03 - Chains with LCEL (LangChain Expression Language)
 Goal: instead of calling prompt.invoke() then llm.invoke() by hand, LangChain
 lets you compose steps with the `|` operator into a single runnable "chain".
 
-Run with: python lessons/03_chains_lcel.py
+Run with (from the project root): python -m lessons.03_chains_lcel
 """
 
 from config import get_llm
